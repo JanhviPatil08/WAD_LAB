@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          
+        .form1 {
+            margin-bottom: 20px;
+        }
+
+        label{
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          }
+          
+          /* Style the submit button */
+          .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+    </style>
+</head>
+<body>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form1">
+            <label for="username">Name</label>
+            <input name="username" type="text" [(ngModel)]="username">
+        </div>
+
+        <div class="form1">
+            <label for="password">Password</label>
+            <input name="password" type="password" [(ngModel)]="password">
+        </div>
+
+        <button class="btn" type="submit">Login</button>
+    </form>
+</body>
+</html>
